@@ -38,8 +38,6 @@ export default function Categories() {
             <div className="container">
                 <div className="scroll-container">
                     {areas.map((area) => (
-                        <>
-                            <FadeContent>
                                 <button
                                     key={area.name}
                                     className="cuisine-btn"
@@ -48,8 +46,6 @@ export default function Categories() {
                                     <img src={area.image} alt={area.name} className="cuisine-img" />
                                     <span>{area.name}</span>
                                 </button>
-                            </FadeContent>
-                        </>
                     ))}
                 </div>
             </div>
