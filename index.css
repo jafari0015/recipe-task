@@ -45,11 +45,10 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.FormLogin h1 {
+.FormLogin h1{
     color: var(--main);
     font-size: 2.5rem;
 }
-
 .FormLogin p {
     font-size: 20px;
     margin-top: 10px;
@@ -90,11 +89,11 @@
 
 /* ----------------------  LOGIN FORM ------------------- */
 .LoginForm {
-    padding-top: 200px;
+    padding-top: 300px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./public/foody.jpg);
+    background-image:  url(./public/Form.jpg);
     background-repeat: none;
     padding-bottom: 310px;
     background-size: 100% 100%;
@@ -183,7 +182,7 @@ a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./public/foody.jpg);
+    background-image: url(./public/Form.jpg);
     background-size: 100% 100%;
     background-repeat: none;
     padding-bottom: 50px;
@@ -362,7 +361,7 @@ a {
     margin-left: 30px;
 }
 
-.greetingHome h1 {
+.greetingHome .titleHome {
     color: var(--main);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2.7rem;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import AnimatedContent from '../Animation/AnimatedContent';
 const LoginForm = () => {
   const navigate = useNavigate();
 
@@ -17,7 +18,8 @@ const LoginForm = () => {
         <h1>Welcome Back</h1>
         <p>Login to your account </p>
         <form className='recipeLoginForm'>
-             <i className="fa-solid fa-user"></i>
+             <AnimatedContent>
+              <i className="fa-solid fa-user"></i>
             <input type="text" placeholder='User name / Mail' required />
             <br />
             <br />
@@ -36,6 +38,7 @@ const LoginForm = () => {
             <div className='signUp'>
               <span>Not hava an Account?</span> <span><a href="#" onClick={() => navigate('/createAccount')} >Sign up</a> </span>
             </div>
+             </AnimatedContent>
         </form>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import Choose from "../components/Choose";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import AnimatedContent from "../Animation/AnimatedContent"
 
 export default function Cuisine() {
   const { area } = useParams();
@@ -39,7 +40,7 @@ export default function Cuisine() {
       <div className="meal-grid">
         {meals.map((meal) => (
           <div key={meal.idMeal} className="meal-card">
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
+              <img src={meal.strMealThumb} alt={meal.strMeal} />
             <h3>{meal.strMeal}</h3>
             <div className="detailsRecipes">
               <i className="fa-regular fa-bookmark" onClick={() => handleAddFavorite(meal)}></i>

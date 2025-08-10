@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import FadeContent from "../Animation/FadeContent";
 
 export default function Home() {
     const [areas, setAreas] = useState([]);
@@ -38,7 +39,9 @@ export default function Home() {
          <div className="container">
             <div className="scroll-container">
                 {areas.map((area) => (
-                    <button
+                    <>
+                    <FadeContent>
+                        <button
                         key={area.name}
                         className="cuisine-btn"
                         onClick={() => navigate(`/cuisine/${area.name}`)}
@@ -46,6 +49,8 @@ export default function Home() {
                         <img src={area.image} alt={area.name} className="cuisine-img" />
                         <span>{area.name}</span>
                     </button>
+                    </FadeContent>
+                    </>
                 ))}
             </div>
         </div>

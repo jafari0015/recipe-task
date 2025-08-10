@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import FadeContent from "../Animation/FadeContent";
 
 export default function Popular() {
   const { area } = useParams();
@@ -34,7 +35,8 @@ export default function Popular() {
       <div className="meal-gridPopular">
         {meals.map((meal) => (
           <div key={meal.idMeal} className="meal-cardPopular">
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
+            <FadeContent>
+              <img src={meal.strMealThumb} alt={meal.strMeal} />
             <h3>{meal.strMeal}</h3>
             <div className="detailsPopular">
               <i className="fa-regular fa-bookmark" onClick={() => handleAddFavorite(meal)}></i>
@@ -42,6 +44,7 @@ export default function Popular() {
                 <button>View Recipe</button>
               </Link>
             </div>
+            </FadeContent>
           </div>
         ))}
       </div>

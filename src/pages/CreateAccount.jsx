@@ -1,5 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import FadeContent from '../Animation/FadeContent';
+import AnimatedContent from '../Animation/AnimatedContent';
 
 const CreateAccount = () => {
   const navigate = useNavigate();
@@ -15,7 +17,8 @@ const CreateAccount = () => {
         </button>
       </div>
      <form action="" className='RegisterForm'>
-          <h1>
+          <FadeContent>
+            <h1>
            Register
           </h1>
           <p> Create your new account </p>
@@ -38,11 +41,14 @@ const CreateAccount = () => {
             <span><a href="#">Forgot Password</a></span>
           </div>
         </div>
+          </FadeContent>
      </form>
+
      <form className='googleSign'> 
       <div className='demo'><hr />  <span>Or continue with </span> <hr /></div>
       <div className='wrapper'>
-        <div className='IconDive'>
+        <AnimatedContent>
+          <div className='IconDive'>
           <a href="#"><i className="fa-brands fa-square-facebook"></i></a>
           <a href="3"><i className="fa-brands fa-google"></i></a>
           <a href="#"><i className="fa-brands fa-apple"></i></a>
@@ -50,6 +56,7 @@ const CreateAccount = () => {
         <p>
           Already have an account? <span><a href="#" onClick={() => navigate('/login')}>Sign in</a></span>
         </p>
+        </AnimatedContent>
       </div>
      </form>
     </div>

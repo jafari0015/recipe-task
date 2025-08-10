@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import FadeContent from "../Animation/FadeContent"
 
 export default function Featured() {
   const [recipes, setRecipes] = useState([]);
@@ -19,10 +20,12 @@ export default function Featured() {
       <div className="recipe-grid">
         {recipes.map((meal) => (
         <Link to={`/recipeDetails/${meal.idMeal}`} key={meal.idMeal}>
-          <div key={meal.idMeal} className="recipe-card">
+          <FadeContent>
+            <div key={meal.idMeal} className="recipe-card">
             <img src={meal.strMealThumb} alt={meal.strMeal} />
-            <h3>{meal.strMeal}</h3>
+            <h3>{meal.strMeal}</h3> 
           </div>
+          </FadeContent>
         </Link>
         ))}
       </div>
