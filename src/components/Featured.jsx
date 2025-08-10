@@ -15,20 +15,22 @@ export default function Featured() {
   }, []);
 
   return (
-    <div className="featuredRecipe">
-      <h2>Featured </h2>
-      <div className="recipe-grid">
-        {recipes.map((meal) => (
-        <Link to={`/recipeDetails/${meal.idMeal}`} key={meal.idMeal}>
-          <FadeContent>
-            <div key={meal.idMeal} className="recipe-card">
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
-            <h3>{meal.strMeal}</h3> 
-          </div>
-          </FadeContent>
-        </Link>
-        ))}
+    <>
+      <div className="featuredRecipe">
+        <h2>Featured </h2>
+        <div className="recipe-grid">
+          {recipes.map((meal) => (
+            <Link to={`/recipeDetails/${meal.idMeal}`} key={meal.idMeal}>
+              <FadeContent>
+                <div key={meal.idMeal} className="recipe-card">
+                  <img src={meal.strMealThumb} alt={meal.strMeal} />
+                  <h3>{meal.strMeal}</h3>
+                </div>
+              </FadeContent>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

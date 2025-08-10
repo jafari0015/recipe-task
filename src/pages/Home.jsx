@@ -9,6 +9,7 @@ import SplitText from '../Animation/SplitText';
 
 const Home = () => {
   const [avatarUrl, setAvatarUrl] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const handleLoginPage = () => {
@@ -59,13 +60,19 @@ const Home = () => {
         <div>
           <div className="searchInput">
             <i className="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder='Search Recipes' />
+            <input
+              type="text"
+              placeholder="Search Recipes"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
           </div>
         </div>
       </div>
-      <Categories />
-      <Featured />
-      <Popular />
+      <Categories searchTerm={searchTerm} />
+      <Featured searchTerm={searchTerm} />
+      <Popular searchTerm={searchTerm} />
+
     </>
   )
 }
