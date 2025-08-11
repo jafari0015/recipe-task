@@ -15,7 +15,7 @@ const Home = () => {
   const handleLoginPage = () => {
     navigate('/profile')
   }
-  const openSideBar = () => 
+  const openSideBar = () => {
     setIsOpen(true);
   }
   useEffect(() => {
