@@ -24,7 +24,7 @@ const LoginForm = () => {
             <br />
             <br />
             <i className="fa-solid fa-lock"></i>
-            <input type="text" placeholder='Password' required/> <br />
+            <input type="password" placeholder='Password' required/> <br />
             <div className="forgotPass">
               <div><input type="checkbox"/> 
             <span> &nbsp; Remember me </span></div>
@@ -32,7 +32,7 @@ const LoginForm = () => {
             </div>
             <br />
             <br /> 
-            <button onClick={() => navigate('/profile')}>
+            <button onClick={() => navigate('/profile')} type='submit'>
                 Login
             </button> <br />
             <div className='signUp'>

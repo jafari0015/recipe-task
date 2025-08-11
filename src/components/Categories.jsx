@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import FadeContent from "../Animation/FadeContent";
 
 export default function Categories() {
     const [areas, setAreas] = useState([]);

@@ -30,10 +30,10 @@ const CreateAccount = () => {
           <input type="text" placeholder='user@gmail.com' required/>
           <br /> <br />
           <i className="fa-solid fa-lock"></i>
-          <input type="text"  placeholder='Password' required/>
+          <input type="password"  placeholder='Password' required/>
         </div>
         <div className='registerButton'>
-          <button onClick={()=> navigate('/profile')}>Login</button> 
+          <button type='submit' onClick={()=> navigate('/profile')}>Login</button> 
           <div className='registerFor'>
             <span>
               <input type="checkbox" /> <span> Remember me</span>

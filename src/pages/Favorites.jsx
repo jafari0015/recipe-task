@@ -32,7 +32,6 @@ export default function Favorite() {
         <div className="meal-grid">
           {favorites.map((meal) => (
             <div key={meal.idMeal} className="meal-card">
-
               <img src={meal.strMealThumb} alt={meal.strMeal} />
               <h3>{meal.strMeal}</h3>
               <div className="detailsRecipes">

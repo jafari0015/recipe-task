@@ -15,7 +15,7 @@ const Home = () => {
   const handleLoginPage = () => {
     navigate('/profile')
   }
-  const openSideBar = () => {
+  const openSideBar = () => 
     setIsOpen(true);
   }
   useEffect(() => {
@@ -70,8 +70,8 @@ const Home = () => {
         </div>
       </div>
       <Categories searchTerm={searchTerm} />
-      <Featured searchTerm={searchTerm} />
-      <Popular searchTerm={searchTerm} />
+      <Featured />
+      <Popular />
 
     </>
   )

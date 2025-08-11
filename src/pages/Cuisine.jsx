@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import Choose from "../components/Choose";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import AnimatedContent from "../Animation/AnimatedContent"
 
 export default function Cuisine() {
   const { area } = useParams();
